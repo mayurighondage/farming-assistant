@@ -1,8 +1,8 @@
-
+from flask import Flask, render_template_string, request
 from PIL import Image
 import os
 import random
-
+app = Flask(__name__)
 
 # ================= SHARED UI COMPONENTS =================
 STYLE = """
@@ -39,7 +39,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 CLASSES = ['Healthy', 'Early_Blight', 'Late_Blight']
 
 # ================= ROUTES =================
-
+@app.route('/')
 def home():
     return render_template_string(f"""
     {STYLE}
