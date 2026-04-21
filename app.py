@@ -3,7 +3,6 @@ from PIL import Image
 import os
 import random
 
-app = Flask(__name__)
 
 # ================= SHARED UI COMPONENTS =================
 STYLE = """
