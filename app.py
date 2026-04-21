@@ -39,7 +39,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 CLASSES = ['Healthy', 'Early_Blight', 'Late_Blight']
 
 # ================= ROUTES =================
-@app.route('/')
+
 def home():
     return render_template_string(f"""
     {STYLE}
